@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BIENVENIDO/A A TU CUENTA</h1>
+
+        <div id="auth-section">
+            <h2>Ingreso de Clave</h2>
+            <form id="auth-form">
+                <label for="clave">INGRESA TU CLAVE DE 4 DIGITOS:</label>
+                <input type="password" id="clave" name="clave" maxlength="4" required>
+                <button type="submit">Acceder</button>
+            </form>
+            <p id="auth-message"></p>
+        </div>
+
+        <div id="transaction-section" style="display: none;">
+            <h2>Gestión de Dinero</h2>
+            <p>Tu saldo disponible es de <span id="saldo-disponible">10000</span></p>
+            <form id="transaction-form">
+                <label for="retiro">¿Cuánto dinero deseas retirar?</label>
+                <input type="number" id="retiro" name="retiro" min="0" step="0.01" required>
+                <button type="submit">Retirar</button>
+            </form>
+            <p id="transaction-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
